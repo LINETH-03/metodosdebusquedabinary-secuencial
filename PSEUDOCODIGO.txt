@@ -1,0 +1,20 @@
+PSEUDOCODIGO BUSQUEDA BINARIA
+Aquí está el pseudocódigo para la búsqueda binaria, modificado para buscar en un arreglo. 
+Las entradas son el arreglo, el cual llamamos array; el número n de elementos en array; y pos,
+el número que estamos buscando. La salida es el índice de pos en array:
+1.Sea start = 0 y size = n-1.
+2.Calcula pos como el promedio de start y size, redondeado hacia abajo (para que sea un entero).1
+3.Si arraybinario[pos] es igual a numSearch, entonces detente. ¡el numero esta en el array! Regresa pos.
+4.Si el intento fue demasiado bajo, es decir, array[pos] < numSearch, entonces haz size = pos + 1.
+5.De lo contrario, el intento fue demasiado alto. Haz start = pos - 1.
+6.Regresa al paso 2.
+
+PSEUDOCODIGO 
+BUSQUEDA SECUENCIAL
+posicion = -1
+para (i < tam)
+Si arraysecuencial[i] == numSearchsec (numero que buscamos) dato devolver verdadero y/o pos, de lo contrario:
+
+posicion = i
+romper
+Devolver posicion.
