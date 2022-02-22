@@ -8,6 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 	 Busquedabinaria();
+	 //Busquedasecuencial();
 
 
     }
@@ -27,6 +28,17 @@ public class Main {
 
     }
     public static void Busquedasecuencial(){
+        System.out.println("  BUSQUEDA SECUENCIAL O LINEAL"+"\n"+"--------------------------------");
+        int[] numbers={5,250,175,30,4,21,12,33};
+        System.out.println("ARRAY: "+"\n"+Arrays.toString(numbers)+"\n");
+        int Search = 5;
+        Arrays.sort(numbers);
+        System.out.println("Ordenado:");
+        System.out.println(Arrays.toString(numbers)+"\n");
+        if ( secuencialsearch(numbers, Search)!= -1)
+            System.out.println("¬El número " + Search + " está en el Array¬");
+        else
+            System.out.println("El número " + Search + " NO está en el Array");
 
     }
 
@@ -47,7 +59,15 @@ public class Main {
         }
         return -1;
     }
-    public static  secuencialsearch(int[] arraysecuencial, int numSearch) {
+   public static int secuencialsearch(int[] arraysecuencial, int numSearchsec) {
+       int posicion = -1;
+       for(int i = 0; i < arraysecuencial.length; i++){
+           if(arraysecuencial[i] == numSearchsec){
+               posicion = i;
+               break;
+           }
+       }
+       return posicion;
 
     }
         //int size = arraynumbers.length;
